@@ -1,0 +1,11 @@
+1) Datos limpios:
+  - E002: correo 'ANDRES.PEREZ@ejemplo.com ' -> 'andres.perez@ejemplo.com' (minúsculas y sin espacios).
+  - E004: área vacía -> 'Sin área' (pendiente que RRHH la confirme).
+  - Duplicado E003 (María Torres): se descartó la segunda fila.
+2) Festivos...
+3) Clasificando y generando reporte...
+Exactitud: 12/12 = 100%
+Errores:
+ninguno
+Revisión humana: 4 de 12
+Reporte: output/reporte_solicitudes.csv
