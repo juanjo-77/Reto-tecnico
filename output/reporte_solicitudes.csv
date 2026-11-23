@@ -9,5 +9,5 @@ S07,E007,Valentina Ruiz,Comercial,CERTIFICADO_LABORAL,0.9,,,,N/A,NO,,reglas
 S08,E003,María Torres,Talento Humano,OTRO,0.5,,,,N/A,SI,Confianza baja (0.50 < 0.7),reglas
 S09,E006,Camilo Díaz,Operaciones,VACACIONES,0.6,,,,N/A,SI,Confianza baja (0.60 < 0.7); Vacaciones sin fechas,reglas
 S10,E009,(no existe),,CERTIFICADO_LABORAL,0.9,,,,N/A,SI,Empleado inexistente en la nómina,reglas
-S11,E002,Andrés Pérez,Comercial,OTRO,0.5,,,,N/A,SI,Confianza baja (0.50 < 0.7),reglas
+S11,E002,Andrés Pérez,Comercial,ACTUALIZACION_DATOS,0.9,,,,N/A,NO,,reglas
 S12,E001,Laura Gómez,Tecnología,INCAPACIDAD,0.9,,,,N/A,NO,,reglas
