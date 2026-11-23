@@ -1,8 +1,8 @@
-# Guía completa: qué se hizo y por qué (para ti, para la entrevista)
+﻿# Guía completa: qué se hizo y por qué (para ti, para la entrevista)
 
 ## 1. Qué hace el proyecto en una frase
 Lee empleados y solicitudes → limpia y guarda en SQLite → trae festivos de Colombia por API →
-clasifica cada solicitud (IA Gemini, o reglas si no hay clave) → calcula días hábiles →
+clasifica cada solicitud (IA Groq, o reglas si no hay clave) → calcula días hábiles →
 aplica reglas de revisión humana → escribe `output/reporte_solicitudes.csv`.
 
 ## 2. Tecnologías y dependencias (todo gratis)
@@ -14,7 +14,7 @@ aplica reglas de revisión humana → escribe `output/reporte_solicitudes.csv`.
 | **csv / json / re / datetime** (stdlib) | Leer datos, regex, fechas | Suficiente para todo |
 | **pytest** | Pruebas | ÚNICA dependencia externa (`requirements.txt`) |
 | **Nager.Date API** | Festivos de Colombia | Pedida en Misión 2, sin clave |
-| **Gemini API** (REST) | Modelo de IA | Nivel gratis; se llama con HTTP simple, sin SDK |
+| **Groq API** (REST) | Modelo de IA | Nivel gratis; se llama con HTTP simple, sin SDK |
 | **Power Automate Desktop** | Orquestación | Misión 4, opción A (gratis en Windows) |
 | **GitHub Actions** | Corre pytest en cada push | Bonus |
 | **Git** | Control de versiones | Misión 5 |
@@ -33,7 +33,7 @@ src/festivos.py    API Nager con timeout, reintentos y respaldo (Misión 2)
 src/dias.py        cálculo de días hábiles
 src/enmascarar.py  oculta correo, celular y documento
 src/clasif_reglas.py  clasificador sin IA (también es el plan B)
-src/clasif_ia.py   Gemini + validación del JSON
+src/clasif_ia.py   Groq + validación del JSON
 src/revision.py    reglas de revisión humana
 src/reporte.py     une todo y genera reporte + métricas
 src/main.py        punto de entrada
@@ -60,13 +60,13 @@ output/            todo lo generado (reporte, consultas, log, limpieza)
   `data/festivos_CO_2026.json` (la última respuesta buena). Si tampoco existe, falla con mensaje claro.
 
 ### Misión 3 – IA
-- Gemini por REST, `responseMimeType: application/json`, `temperature: 0` (respuestas estables).
+- Groq por REST, `response_format: json_object`, `temperature: 0` (respuestas estables).
 - **Validación**: categoría ∈ 5 válidas, confianza 0–1, fechas ISO reales. Si no cumple → se descarta y se usan reglas.
 - **Enmascarado antes de enviar**: correo → `[CORREO]`, celular (3 + 9 dígitos) → `[CELULAR]`, documento (6–10 dígitos) → `[DOCUMENTO]`. El orden importa: primero correo y celular, luego documento.
-- La clave va en header `x-goog-api-key` (no en la URL, para que no quede en logs) y se lee de `.env`.
-- **Sin clave funciona igual** con reglas (plan B). En el reporte la columna `fuente` dice `gemini` o `reglas`.
+- La clave va en header `Authorization: Bearer` (no en la URL, para que no quede en logs) y se lee de `.env`.
+- **Sin clave funciona igual** con reglas (plan B). En el reporte la columna `fuente` dice `Groq` o `reglas`.
   *Importante*: el máximo de 12 pts aplica si NO usas API de IA; para los 25 pts crea tu clave gratis en
-  https://aistudio.google.com/apikey, ponla en `.env` y ejecuta de nuevo.
+  https://console.groq.com/keys, ponla en `.env` y ejecuta de nuevo.
 - **Exactitud**: se compara con `etiqueta_esperada`; sale en `output/metricas.txt` con la lista de errores.
   Las reglas fallaron primero en S11 ("actualícenlo" con tilde); lo corregí con regex `actual[ií]c`.
 - **Revisión humana** (`revision.py`): empleado inexistente, confianza < 0.7, vacaciones sin fechas,
@@ -85,7 +85,7 @@ Ver `docs/power_automate.md`. Python devuelve código de salida ≠ 0 si falla; 
 ## 5. Limitaciones (di esto en la entrevista, se valora)
 - Fechas por regex: solo entiende "del X al Y de mes" y "desde el X de mes".
 - Reglas de clasificación son por palabras clave; frágiles ante textos nuevos.
-- Cada solicitud va a Gemini una por una (sin lotes); con el límite gratuito puede fallar y cae a reglas.
+- Cada solicitud va a Groq una por una (sin lotes); con el límite gratuito puede fallar y cae a reglas.
 - Saldo de vacaciones no se descuenta ni considera solicitudes previas del mismo empleado.
 - Reporte CSV; no hay tablero. Datos personales en la base local sin cifrar.
 - Para producción con TI: base real (SQL Server/Postgres), secretos en un gestor (Key Vault), ejecución programada, monitoreo/alertas, acuerdo de datos con el proveedor de IA.
@@ -98,7 +98,7 @@ python -m pytest -q
 ```
 
 ## 7. Pendientes tuyos
-1. Crear clave Gemini y ponerla en `.env` (para puntaje completo de IA).
+1. Crear clave Groq y ponerla en `.env` (para puntaje completo de IA).
 2. Construir el flujo en Power Automate Desktop + capturas en `docs/`.
 3. Crear repo en GitHub y hacer `git remote add origin ...` + `git push`.
 4. (Opcional) video de 3 min.

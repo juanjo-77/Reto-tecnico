@@ -1,13 +1,13 @@
 ﻿id_solicitud,id_empleado,empleado,area,categoria,confianza,fecha_inicio,fecha_fin,dias_habiles,saldo_suficiente,requiere_revision,motivo,fuente
-S01,E001,Laura Gómez,Tecnología,VACACIONES,0.95,2026-12-14,2026-12-18,5,SI,NO,,reglas
-S02,E002,Andrés Pérez,Comercial,CERTIFICADO_LABORAL,0.9,,,,N/A,NO,,reglas
-S03,E006,Camilo Díaz,Operaciones,INCAPACIDAD,0.9,2026-11-03,2026-11-05,,N/A,NO,,reglas
-S04,E004,Julián Rojas,Sin área,ACTUALIZACION_DATOS,0.9,,,,N/A,NO,,reglas
-S05,E005,Sofía Herrera,Finanzas,VACACIONES,0.95,2026-12-07,2026-12-11,4,SI,NO,,reglas
-S06,E008,Felipe Castro,Tecnología,VACACIONES,0.95,2026-12-21,2026-12-31,8,NO,SI,Pide 8 días hábiles y solo tiene 0,reglas
-S07,E007,Valentina Ruiz,Comercial,CERTIFICADO_LABORAL,0.9,,,,N/A,NO,,reglas
-S08,E003,María Torres,Talento Humano,OTRO,0.5,,,,N/A,SI,Confianza baja (0.50 < 0.7),reglas
-S09,E006,Camilo Díaz,Operaciones,VACACIONES,0.6,,,,N/A,SI,Confianza baja (0.60 < 0.7); Vacaciones sin fechas,reglas
-S10,E009,(no existe),,CERTIFICADO_LABORAL,0.9,,,,N/A,SI,Empleado inexistente en la nómina,reglas
-S11,E002,Andrés Pérez,Comercial,ACTUALIZACION_DATOS,0.9,,,,N/A,NO,,reglas
-S12,E001,Laura Gómez,Tecnología,INCAPACIDAD,0.9,,,,N/A,NO,,reglas
+S01,E001,Laura Gómez,Tecnología,VACACIONES,0.95,2026-12-14,2026-12-18,5,SI,NO,,groq
+S02,E002,Andrés Pérez,Comercial,CERTIFICADO_LABORAL,0.95,,,,N/A,NO,,groq
+S03,E006,Camilo Díaz,Operaciones,INCAPACIDAD,0.95,2026-11-03,2026-11-05,,N/A,NO,,groq
+S04,E004,Julián Rojas,Sin área,ACTUALIZACION_DATOS,0.95,,,,N/A,NO,,groq
+S05,E005,Sofía Herrera,Finanzas,VACACIONES,0.95,2026-12-07,2026-12-11,4,SI,NO,,groq
+S06,E008,Felipe Castro,Tecnología,VACACIONES,0.95,2026-12-21,2026-12-31,8,NO,SI,Pide 8 días hábiles y solo tiene 0,groq
+S07,E007,Valentina Ruiz,Comercial,CERTIFICADO_LABORAL,0.95,,,,N/A,NO,,groq
+S08,E003,María Torres,Talento Humano,OTRO,0.9,,,,N/A,NO,,groq
+S09,E006,Camilo Díaz,Operaciones,VACACIONES,0.9,,,,N/A,SI,Vacaciones sin fechas,groq
+S10,E009,(no existe),,CERTIFICADO_LABORAL,0.95,,,,N/A,SI,Empleado inexistente en la nómina,groq
+S11,E002,Andrés Pérez,Comercial,ACTUALIZACION_DATOS,0.95,,,,N/A,NO,,groq
+S12,E001,Laura Gómez,Tecnología,INCAPACIDAD,0.95,2026-11-06,2026-11-07,,N/A,NO,,groq
