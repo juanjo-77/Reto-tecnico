@@ -14,3 +14,5 @@ Crea un flujo nuevo "Automatizador RRHH" con estas acciones (ajusta la ruta a tu
 
 `ejecutar.bat` ya escribe también `output\log.txt` con fecha, hora y resultado.
 Toma capturas del flujo y de una ejecución exitosa y otra fallida (renombra `src\main.py` para provocar el fallo) y guárdalas en `docs/`.
+
+Atajo: en el diseñador de PAD puedes copiar el contenido de docs/flujo_pad.txt y pegarlo (Ctrl+V) para crear las acciones de golpe. Es un borrador sin probar: si PAD rechaza alguna línea, usa los pasos de arriba.
