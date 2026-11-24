@@ -1,13 +1,10 @@
 ﻿id_solicitud,id_empleado,empleado,area,categoria,confianza,fecha_inicio,fecha_fin,dias_habiles,saldo_suficiente,requiere_revision,motivo,fuente
-S01,E001,Laura Gómez,Tecnología,VACACIONES,0.95,2026-12-14,2026-12-18,5,SI,NO,,groq
-S02,E002,Andrés Pérez,Comercial,CERTIFICADO_LABORAL,0.95,,,,N/A,NO,,groq
-S03,E006,Camilo Díaz,Operaciones,INCAPACIDAD,0.95,2026-11-03,2026-11-05,,N/A,NO,,groq
-S04,E004,Julián Rojas,Sin área,ACTUALIZACION_DATOS,0.95,,,,N/A,NO,,groq
-S05,E005,Sofía Herrera,Finanzas,VACACIONES,0.95,2026-12-07,2026-12-11,4,SI,NO,,groq
-S06,E008,Felipe Castro,Tecnología,VACACIONES,0.95,2026-12-21,2026-12-31,8,NO,SI,Pide 8 días hábiles y solo tiene 0,groq
-S07,E007,Valentina Ruiz,Comercial,CERTIFICADO_LABORAL,0.95,,,,N/A,NO,,groq
-S08,E003,María Torres,Talento Humano,OTRO,0.9,,,,N/A,NO,,groq
-S09,E006,Camilo Díaz,Operaciones,VACACIONES,0.9,,,,N/A,SI,Vacaciones sin fechas,groq
-S10,E009,(no existe),,CERTIFICADO_LABORAL,0.95,,,,N/A,SI,Empleado inexistente en la nómina,groq
-S11,E002,Andrés Pérez,Comercial,ACTUALIZACION_DATOS,0.95,,,,N/A,NO,,groq
-S12,E001,Laura Gómez,Tecnología,INCAPACIDAD,0.95,2026-11-06,2026-11-07,,N/A,NO,,groq
+D01,E008,Felipe Castro,Tecnología,VACACIONES,0.95,2026-12-14,2026-12-18,5,NO,SI,Pide 5 días hábiles y solo tiene 0,groq
+D02,E099,(no existe),,CERTIFICADO_LABORAL,0.95,,,,N/A,SI,Empleado inexistente en la nómina,groq
+D03,E003,María Torres,Talento Humano,VACACIONES,0.9,,,,N/A,SI,Vacaciones sin fechas,groq
+D04,E005,Sofía Herrera,Finanzas,OTRO,0.9,,,,N/A,NO,,groq
+D05,E006,Camilo Díaz,Operaciones,VACACIONES,0.95,2026-12-07,2026-12-18,9,NO,SI,Pide 9 días hábiles y solo tiene 3,groq
+D06,E001,Laura Gómez,Tecnología,CERTIFICADO_LABORAL,0.95,,,,N/A,NO,,groq
+D07,E004,Julián Rojas,Sin área,INCAPACIDAD,0.95,2026-11-17,2026-11-19,,N/A,NO,,groq
+D08,E100,(no existe),,VACACIONES,0.95,2026-12-14,2026-12-18,5,N/A,SI,Empleado inexistente en la nómina,groq
+D09,E002,Andrés Pérez,Comercial,VACACIONES,0.95,,,,N/A,SI,Vacaciones sin fechas,groq

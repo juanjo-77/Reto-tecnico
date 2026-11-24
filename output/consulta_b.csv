@@ -1,2 +1,3 @@
 id_solicitud,id_empleado,texto
-S10,E009,Solicito certificado laboral para trámite de visa.
+D02,E099,Solicito certificado laboral para un trámite de visa.
+D08,E100,Solicito vacaciones del 14 al 18 de diciembre de 2026.

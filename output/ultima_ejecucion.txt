@@ -1,11 +1,12 @@
 1) Datos limpios:
-  - E002: correo 'ANDRES.PEREZ@ejemplo.com ' -> 'andres.perez@ejemplo.com' (minÃºsculas y sin espacios).
-  - E004: Ã¡rea vacÃ­a -> 'Sin Ã¡rea' (pendiente que RRHH la confirme).
-  - Duplicado E003 (MarÃ­a Torres): se descartÃ³ la segunda fila.
+  - E002: correo 'ANDRES.PEREZ@ejemplo.com ' -> 'andres.perez@ejemplo.com' (minúsculas y sin espacios).
+  - E004: área vacía -> 'Sin área' (pendiente que RRHH la confirme).
+  - Duplicado E003 (María Torres): se descartó la segunda fila.
 2) Festivos...
 3) Clasificando y generando reporte...
-Exactitud: 12/12 = 100%
+AVISO: cierra el Excel; el reporte se guardó como reporte_solicitudes_192921.xlsx
+Exactitud: 9/9 = 100%
 Errores:
 ninguno
-RevisiÃ³n humana: 4 de 12
+Revisión humana: 6 de 9
 Reporte: output/reporte_solicitudes.csv
