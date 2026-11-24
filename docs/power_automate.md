@@ -3,7 +3,7 @@
 Flujo "Automatizador RRHH" (17 acciones), creado en Power Automate Desktop:
 
 1. Variables `ProyectoDir`, `Reporte` (output\reporte_solicitudes.csv) y `LogFlujo` (output\log_flujo.txt).
-2. Obtener la fecha y hora actuales -> `CurrentDateTime`.
+2. Cuadro de selección: pregunta qué archivo procesar (`limpio` o `dudosos`) y lo guarda en `Eleccion`. El comando DOS se llama `ejecutar.bat %Eleccion%`.`n3. Obtener la fecha y hora actuales -> `CurrentDateTime`.
 3. Ejecutar comando DOS: `ejecutar.bat` (corre `python src\main.py`), guarda el código de salida en `CodigoSalida`.
 4. Si el archivo `Reporte` existe:
    - Si `CodigoSalida` = 0: escribe "OK" con fecha y hora en `log_flujo.txt` y muestra "Reporte generado correctamente".
@@ -19,3 +19,4 @@ Flujo "Automatizador RRHH" (17 acciones), creado en Power Automate Desktop:
 
 ## Limitación
 El flujo vive en la cuenta/equipo de Power Automate, no en el repositorio. Para exportarlo: en el diseñador, seleccionar todas las acciones, copiarlas y pegarlas en un .txt.
+
