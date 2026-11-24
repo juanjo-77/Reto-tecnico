@@ -2,6 +2,7 @@
 import csv
 import sqlite3
 
+import excel
 from clasif_ia import clasificar
 from config import DB, SALIDA
 from dias import dias_habiles
@@ -41,6 +42,7 @@ def procesar(festivos):
         w = csv.DictWriter(fh, COLUMNAS)
         w.writeheader()
         w.writerows(filas)
+    excel.escribir(filas, aciertos)
     total = len(filas)
     texto = f"Exactitud: {aciertos}/{total} = {aciertos / total:.0%}\nErrores:\n" + ("\n".join(errores) or "ninguno")
     (SALIDA / "metricas.txt").write_text(texto + "\n", encoding="utf-8")
