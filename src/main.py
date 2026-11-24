@@ -9,7 +9,8 @@ from reporte import procesar
 
 def main():
     print("1) Datos limpios:")
-    for linea in db.cargar():
+    # opcional: python src/main.py ruta\a\otras_solicitudes.json
+    for linea in db.cargar(sys.argv[1] if len(sys.argv) > 1 else None):
         print("  -", linea)
     consultas.ejecutar()
     print("2) Festivos...")

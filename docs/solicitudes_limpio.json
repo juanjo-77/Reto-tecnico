@@ -1,0 +1,11 @@
+[
+  {"id_solicitud": "L01", "id_empleado": "E001", "fecha_recepcion": "2026-11-09", "canal": "correo", "texto": "Hola, quiero solicitar vacaciones del 14 al 18 de diciembre de 2026. Gracias.", "etiqueta_esperada": "VACACIONES"},
+  {"id_solicitud": "L02", "id_empleado": "E002", "fecha_recepcion": "2026-11-09", "canal": "formulario", "texto": "Necesito un certificado laboral con salario para un trámite en el banco.", "etiqueta_esperada": "CERTIFICADO_LABORAL"},
+  {"id_solicitud": "L03", "id_empleado": "E003", "fecha_recepcion": "2026-11-10", "canal": "correo", "texto": "Adjunto incapacidad médica por 2 días desde el 9 de noviembre.", "etiqueta_esperada": "INCAPACIDAD"},
+  {"id_solicitud": "L04", "id_empleado": "E005", "fecha_recepcion": "2026-11-10", "canal": "correo", "texto": "Solicito vacaciones del 14 al 16 de diciembre de 2026.", "etiqueta_esperada": "VACACIONES"},
+  {"id_solicitud": "L05", "id_empleado": "E007", "fecha_recepcion": "2026-11-11", "canal": "chat", "texto": "Quiero tomar vacaciones del 1 al 3 de diciembre de 2026.", "etiqueta_esperada": "VACACIONES"},
+  {"id_solicitud": "L06", "id_empleado": "E004", "fecha_recepcion": "2026-11-11", "canal": "chat", "texto": "Me cambié de casa, por favor actualicen mi dirección.", "etiqueta_esperada": "ACTUALIZACION_DATOS"},
+  {"id_solicitud": "L07", "id_empleado": "E002", "fecha_recepcion": "2026-11-12", "canal": "correo", "texto": "Solicito vacaciones del 21 al 23 de diciembre de 2026.", "etiqueta_esperada": "VACACIONES"},
+  {"id_solicitud": "L08", "id_empleado": "E001", "fecha_recepcion": "2026-11-12", "canal": "chat", "texto": "¿Me pueden enviar la constancia de que trabajo aquí? La piden en la universidad.", "etiqueta_esperada": "CERTIFICADO_LABORAL"},
+  {"id_solicitud": "L09", "id_empleado": "E006", "fecha_recepcion": "2026-11-13", "canal": "correo", "texto": "Solicito vacaciones del 15 al 17 de diciembre de 2026.", "etiqueta_esperada": "VACACIONES"}
+]

@@ -1,0 +1,11 @@
+[
+  {"id_solicitud": "D01", "id_empleado": "E008", "fecha_recepcion": "2026-11-16", "canal": "correo", "texto": "Quiero vacaciones del 14 al 18 de diciembre de 2026.", "etiqueta_esperada": "VACACIONES"},
+  {"id_solicitud": "D02", "id_empleado": "E099", "fecha_recepcion": "2026-11-16", "canal": "formulario", "texto": "Solicito certificado laboral para un trámite de visa.", "etiqueta_esperada": "CERTIFICADO_LABORAL"},
+  {"id_solicitud": "D03", "id_empleado": "E003", "fecha_recepcion": "2026-11-17", "canal": "chat", "texto": "Necesito unos días para descansar pronto, aún no sé cuándo.", "etiqueta_esperada": "VACACIONES"},
+  {"id_solicitud": "D04", "id_empleado": "E005", "fecha_recepcion": "2026-11-17", "canal": "chat", "texto": "Hola, ¿cómo va todo por allá?", "etiqueta_esperada": "OTRO"},
+  {"id_solicitud": "D05", "id_empleado": "E006", "fecha_recepcion": "2026-11-18", "canal": "correo", "texto": "Solicito vacaciones del 7 al 18 de diciembre de 2026.", "etiqueta_esperada": "VACACIONES"},
+  {"id_solicitud": "D06", "id_empleado": "E001", "fecha_recepcion": "2026-11-18", "canal": "correo", "texto": "Necesito un certificado laboral con salario, por favor.", "etiqueta_esperada": "CERTIFICADO_LABORAL"},
+  {"id_solicitud": "D07", "id_empleado": "E004", "fecha_recepcion": "2026-11-19", "canal": "correo", "texto": "Me dieron incapacidad médica desde el 17 de noviembre por 3 días. Mi cédula es 1045678901 y mi celular 3109876543.", "etiqueta_esperada": "INCAPACIDAD"},
+  {"id_solicitud": "D08", "id_empleado": "E100", "fecha_recepcion": "2026-11-19", "canal": "formulario", "texto": "Solicito vacaciones del 14 al 18 de diciembre de 2026.", "etiqueta_esperada": "VACACIONES"},
+  {"id_solicitud": "D09", "id_empleado": "E002", "fecha_recepcion": "2026-11-20", "canal": "chat", "texto": "Quiero pedir vacaciones.", "etiqueta_esperada": "VACACIONES"}
+]

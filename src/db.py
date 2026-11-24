@@ -2,6 +2,7 @@
 import csv
 import json
 import sqlite3
+from pathlib import Path
 
 from config import DATOS, DB, SALIDA
 
@@ -48,11 +49,11 @@ def limpiar_empleados(filas):
     return limpias, log
 
 
-def cargar():
+def cargar(ruta_solicitudes=None):
     SALIDA.mkdir(exist_ok=True)
     with open(DATOS / "empleados.csv", encoding="utf-8-sig", newline="") as fh:  # utf-8-sig tolera el BOM de Excel/Windows
         emp, log = limpiar_empleados(list(csv.DictReader(fh)))
-    sol = json.loads((DATOS / "solicitudes.json").read_text(encoding="utf-8-sig"))
+    sol = json.loads(Path(ruta_solicitudes or DATOS / "solicitudes.json").read_text(encoding="utf-8-sig"))
     con = sqlite3.connect(DB)
     con.executescript(ESQUEMA)
     con.executemany(
