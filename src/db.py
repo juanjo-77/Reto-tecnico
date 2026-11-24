@@ -1,4 +1,4 @@
-"""Misión 1: carga CSV/JSON a SQLite, limpia y documenta cada caso."""
+﻿"""Misión 1: carga CSV/JSON a SQLite, limpia y documenta cada caso."""
 import csv
 import json
 import sqlite3
@@ -53,7 +53,7 @@ def cargar(ruta_solicitudes=None):
     SALIDA.mkdir(exist_ok=True)
     with open(DATOS / "empleados.csv", encoding="utf-8-sig", newline="") as fh:  # utf-8-sig tolera el BOM de Excel/Windows
         emp, log = limpiar_empleados(list(csv.DictReader(fh)))
-    sol = json.loads(Path(ruta_solicitudes or DATOS / "solicitudes.json").read_text(encoding="utf-8-sig"))
+    sol = json.loads(Path(ruta_solicitudes or DATOS / "solicitudes_limpio.json").read_text(encoding="utf-8-sig"))
     con = sqlite3.connect(DB)
     con.executescript(ESQUEMA)
     con.executemany(

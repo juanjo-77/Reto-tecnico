@@ -1,4 +1,4 @@
-# Explicación a fondo de cada archivo y cada código
+﻿# Explicación a fondo de cada archivo y cada código
 
 Orden del flujo real: `main.py` → `db.py` → `consultas.py` → `festivos.py` → `reporte.py`
 (que usa `clasif_ia.py`, `clasif_reglas.py`, `enmascarar.py`, `dias.py`, `revision.py`).
@@ -99,7 +99,7 @@ Puede haber varios motivos a la vez (S09: confianza baja + sin fechas). Se separ
 Total: 7 pruebas (la parametrizada cuenta 3). Ejecutar: `python -m pytest -q`.
 
 ## 14. Archivos de datos (`data/`)
-- `empleados.csv`, `solicitudes.json`: datos ficticios del reto, con las trampas (duplicado, correo sucio, área vacía, empleado inexistente).
+- `empleados.csv` (con las trampas: duplicado, correo sucio, área vacía) y `solicitudes_limpio.json` / `solicitudes_dudosos.json` (casos de demo, el segundo con empleados inexistentes, saldos insuficientes y textos ambiguos).
 - `festivos_CO_2026.json`: se crea solo, es la última respuesta buena de la API (respaldo).
 
 ## 15. Archivos de configuración y soporte

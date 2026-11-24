@@ -1,4 +1,4 @@
-"""Punto de entrada: python src/main.py"""
+﻿"""Punto de entrada: python src/main.py"""
 import sys
 
 import consultas
@@ -9,7 +9,7 @@ from reporte import procesar
 
 def main():
     print("1) Datos limpios:")
-    # opcional: python src/main.py ruta\a\otras_solicitudes.json
+    # opcional: python src/main.py data\solicitudes_dudosos.json (sin ruta usa solicitudes_limpio.json)
     for linea in db.cargar(sys.argv[1] if len(sys.argv) > 1 else None):
         print("  -", linea)
     consultas.ejecutar()

@@ -24,7 +24,7 @@ proyecto pequeño, fácil de explicar línea por línea en la entrevista.
 
 ## 3. Estructura de archivos (cada uno corto, una sola responsabilidad)
 ```
-data/            empleados.csv, solicitudes.json (datos del reto) + festivos_CO_2026.json (respaldo API)
+data/            empleados.csv, solicitudes_limpio.json y solicitudes_dudosos.json (casos de demo) + festivos_CO_2026.json (respaldo API)
 sql/consultas.sql  las 3 consultas de la Misión 1
 src/config.py      rutas, umbral de confianza, lee .env a mano
 src/db.py          crea esquema, limpia y carga (Misión 1)

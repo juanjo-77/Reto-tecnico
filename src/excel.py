@@ -1,5 +1,6 @@
 """Reporte en Excel legible para RRHH (el CSV se mantiene para Power Automate)."""
 from collections import Counter
+from datetime import datetime
 
 from openpyxl import Workbook
 from openpyxl.styles import Alignment, Font, PatternFill
@@ -68,4 +69,9 @@ def escribir(filas, aciertos):
     for celda in (r["A6"], r["B6"]):
         celda.font = Font(bold=True)
     r["B2"].font = Font(bold=True, color="C00000")
-    wb.save(SALIDA / "reporte_solicitudes.xlsx")
+    try:
+        wb.save(SALIDA / "reporte_solicitudes.xlsx")
+    except PermissionError:  # el Excel está abierto y Windows lo bloquea: no perder el resultado
+        alterno = SALIDA / f"reporte_solicitudes_{datetime.now():%H%M%S}.xlsx"
+        wb.save(alterno)
+        print(f"AVISO: cierra el Excel; el reporte se guardó como {alterno.name}")
